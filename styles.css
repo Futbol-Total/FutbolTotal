@@ -1,0 +1,252 @@
+/* Reset de estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0c0c1f; /* Fondo gris oscuro */
+  color: #ff0101; /* Texto en rojo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* Header styles */
+.mainPageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Mantiene los elementos en los extremos */
+  width: 100%;
+  padding: 10px 20px; /* Añade más padding para mejor espaciado */
+  background-color: #0c0c1f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Para centrar el título en el espacio disponible */
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #68cc8f;
+  white-space: nowrap;
+  position: absolute; /* Permite centrar sin afectar a otros elementos */
+  left: 50%;
+  transform: translateX(-50%); /* Centra el texto horizontalmente */
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  .mainPageHeader {
+    padding: 10px; /* Reduce padding en pantallas pequeñas */
+  }
+
+  .header-title {
+    font-size: 18px; /* Ajusta el tamaño del título en pantallas pequeñas */
+  }
+}
+
+.logo-img-size-index {
+  width: 50px;
+  height: auto;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-button {
+  text-decoration: none;
+  font-size: 20px;
+  color: #68cc8f;
+}
+
+.icon-button:hover {
+  color: #68cc8f;
+}
+
+.switchButton {
+  cursor: pointer;
+  font-size: 16px;
+  color: #f116ce;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.switchButton:hover {
+  color: #000000;
+}
+
+/* Estilo para enlaces */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 19%;
+  background-color: #1a1a1a;
+  padding: 15px;
+  color: #8e1515;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  background-color: #2e2e2e;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li i {
+  margin-right: 10px;
+}
+
+/* Contenido principal */
+.content {
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  color: #ff0101;
+  border-radius: 5px;
+}
+
+.content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.games-list ul {
+  list-style-type: none;
+}
+
+.games-list ul li {
+  padding: 10px;
+  background-color: #000000;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Estilos actualizados de Partidos destacados */
+.featured-matches {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Los elementos estarán alineados arriba */
+  height: auto; /* Eliminar altura fija para evitar que se estiren demasiado */
+  gap: 10px; /* Reducir espacio entre partidos */
+  width: 50%; /* Mantener el ancho al 50% */
+}
+
+.match {
+  width: 100%; /* Ancho ajustado al 100% */
+  padding: 1px; /* Reducir padding */
+  background-color: #a7a7a747; /* Nuevo color de fondo para los partidos importantes */
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0px 0px 0px rgb(255 1 1);
+  transition: none;
+  margin-bottom: 10px; /* Reducir el margen entre los partidos */
+}
+
+.match:hover {
+  transform: none;
+  box-shadow: 0px 0px 12px rgb(255, 255, 255);
+}
+
+.match img, .team-logo {
+  width: 60px; /* Aumenta el tamaño del logo */
+  height: 60px;
+}
+
+.match-teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team-logo {
+  margin-right: 1px;
+}
+
+.team-logo-right {
+  margin-left: 1px;
+}
+
+.vs {
+  margin: 1px;
+  font-size: 2rem; /* Aumenta el tamaño del texto "VS" */
+  font-weight: bold;
+}
+
+.match h2 {
+  margin: 10px 0;
+  font-size: 1.8rem; /* Ajusta el tamaño del título */
+}
+
+.match p {
+  margin: 15px 0;
+  font-size: 1rem; /* Ajusta el tamaño del texto de los párrafos */
+}
+
+a.match-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.match-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar, .content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .games-list ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured-matches {
+    display: none;
+  }
+}

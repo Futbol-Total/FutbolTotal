@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo para el cuerpo */
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Alinea los divs en columna */
+    align-items: center;    /* Centra horizontalmente los divs */
+    padding: 20px;
+}
+
+/* Estilos para los contenedores de los partidos */
+.match-container {
+    width: 90%;        /* Ocupa todo el ancho del contenedor */
+    margin-bottom: 20px; /* Separación entre los divs contenedores */
+    max-width: 400px;    /* Limita el ancho en pantallas grandes */
+}
+
+/* Estilos para los divs de los partidos */
+.match {
+    background-color: #f2f2f2;  /* Fondo gris claro */
+    padding: 20px;              /* Espacio interno */
+    border: 1px solid #ccc;      /* Borde del div */
+    border-radius: 5px;          /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 10px;         /* Separación interna entre los elementos */
+}
+
+/* Estilo opcional para agregar separación adicional */
+.match + .match {
+    margin-top: 20px; /* Mayor espacio entre los divs si agregas más divs en un match-container */
+}
+
+/* Responsive: Ocultar los partidos en pantallas móviles */
+@media (max-width: 768px) {
+    .match {
+        display: none; /* Oculta los partidos en dispositivos móviles */
+    }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    .match-container {
+        margin-bottom: 15px; /* Espacio menor en pantallas pequeñas */
+    }
+
+    .match {
+        padding: 15px; /* Reducir el padding en pantallas pequeñas */
+    }
+}

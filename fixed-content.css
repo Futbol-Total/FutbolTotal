@@ -1,0 +1,89 @@
+/* Estilos para los contenedores fijos con el nuevo diseño */
+.fixed-content-left-1, .fixed-content-left-2, .fixed-content-right-1, .fixed-content-right-2 {
+    position: fixed;
+    z-index: 1000; /* Coloca los contenedores por encima de otros elementos */
+    min-width: 200px; /* Mínimo ancho para asegurar espacio, pero flexible */
+    height: auto; /* Ajusta la altura según el contenido */
+    background-color: #1C1C2B;
+    border-radius: 8px;
+    border: 1px solid #444;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    flex-direction: column;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+}
+
+.fixed-content-left-1, .fixed-content-left-2, .fixed-content-right-1, .fixed-content-right-2 {
+    background: linear-gradient(145deg, #1E1E30, #23233B);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.fixed-content-left-1:hover, .fixed-content-left-2:hover, .fixed-content-right-1:hover, .fixed-content-right-2:hover {
+    transform: scale(1.05);
+}
+
+/* Posicionamiento de los contenedores */
+.fixed-content-left-1 {
+    top: 20%;
+    left: 5%;
+}
+
+.fixed-content-left-2 {
+    top: 40%;
+    left: 5%;
+}
+
+.fixed-content-right-1 {
+    top: 20%;
+    right: 5%;
+}
+
+.fixed-content-right-2 {
+    top: 40%;
+    right: 5%;
+}
+
+/* Estilo para los enlaces de partidos importantes */
+/* Mejora en la presentación de logos de equipos */
+.team-logo {
+    width: 40px; /* Un poco más grande para visibilidad */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+/* Ajustes para los contenedores de partidos */
+.fixed-content a {
+    color: #F0E68C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    display: flex; /* Flexbox para adaptar el contenido */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%; /* Asegura que el enlace ocupe todo el espacio del contenedor */
+    box-sizing: border-box;
+    min-height: 60px; /* Altura mínima para mantener consistencia */
+}
+
+.fixed-content a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+/* Responsive: Ocultar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .fixed-content-left-1, .fixed-content-left-2, .fixed-content-right-1, .fixed-content-right-2 {
+        display: none;
+    }
+}
