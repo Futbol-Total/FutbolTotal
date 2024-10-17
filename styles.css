@@ -7,9 +7,9 @@
 
 /* Estilo global */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0c0c1f; /* Fondo gris oscuro */
-  color: #ff0101; /* Texto en rojo */
+  font-family: 'Roboto', sans-serif;
+  background-color: #0c0c1f;
+  color: #ff0101;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -20,9 +20,9 @@ body {
 .mainPageHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Mantiene los elementos en los extremos */
+  justify-content: space-between;
   width: 100%;
-  padding: 10px 20px; /* Añade más padding para mejor espaciado */
+  padding: 10px 20px;
   background-color: #0c0c1f;
   position: fixed;
   top: 0;
@@ -30,15 +30,14 @@ body {
   z-index: 1000;
 }
 
-/* Para centrar el título en el espacio disponible */
 .header-title {
   font-size: 20px;
   font-weight: bold;
   color: #68cc8f;
   white-space: nowrap;
-  position: absolute; /* Permite centrar sin afectar a otros elementos */
+  position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centra el texto horizontalmente */
+  transform: translateX(-50%);
 }
 
 .logo-img-size-index {
@@ -135,7 +134,7 @@ a:hover {
   border-radius: 5px;
 }
 
-/* Estilos actualizados de Partidos destacados */
+/* Estilos de Partidos destacados */
 .featured-matches {
   display: flex;
   justify-content: space-between;
@@ -145,21 +144,21 @@ a:hover {
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Los elementos estarán alineados arriba */
-  height: auto; /* Eliminar altura fija para evitar que se estiren demasiado */
-  gap: 10px; /* Reducir espacio entre partidos */
-  width: 50%; /* Mantener el ancho al 50% */
+  justify-content: flex-start;
+  height: auto;
+  gap: 10px;
+  width: 50%;
 }
 
 .match {
-  width: 100%; /* Ancho ajustado al 100% */
-  padding: 1px; /* Reducir padding */
-  background-color: #a7a7a747; /* Nuevo color de fondo para los partidos importantes */
+  width: 100%;
+  padding: 1px;
+  background-color: #a7a7a747;
   border-radius: 50px;
   text-align: center;
   box-shadow: 0px 0px 0px rgb(255 1 1);
   transition: none;
-  margin-bottom: 10px; /* Reducir el margen entre los partidos */
+  margin-bottom: 10px;
 }
 
 .match:hover {
@@ -168,7 +167,7 @@ a:hover {
 }
 
 .match img, .team-logo {
-  width: 60px; /* Aumenta el tamaño del logo */
+  width: 60px;
   height: 60px;
 }
 
@@ -194,18 +193,18 @@ a:hover {
 
 .vs {
   margin: 1px;
-  font-size: 2rem; /* Aumenta el tamaño del texto "VS" */
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .match h2 {
   margin: 10px 0;
-  font-size: 1.8rem; /* Ajusta el tamaño del título */
+  font-size: 1.8rem;
 }
 
 .match p {
   margin: 15px 0;
-  font-size: 1rem; /* Ajusta el tamaño del texto de los párrafos */
+  font-size: 1rem;
 }
 
 a.match-link {
@@ -217,52 +216,79 @@ a.match-link:hover {
   text-decoration: underline;
 }
 
-/* Responsividad mejorada */
-@media (max-width: 768px) {
+/* Media queries para responsividad */
+@media (max-width: px) {
+  .sidebar {
+    width: 25%;
+  }
+  
+  .content {
+    width: 75%;
+  }
+  
+  .match h2 {
+    font-size: 1.5rem;
+  }
+  
+  .match p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 0px) {
   body {
-    padding-top: 60px;
+    padding-top: 5px;
   }
 
   .mainPageHeader {
-    padding: 10px;
+    padding: 1px 10px;
   }
 
   .header-title {
     font-size: 16px;
+    width: 60%;
   }
 
   .logo-img-size-index {
-    width: 40px;
-    height: auto;
+    width: 35px;
+    height: 35px;
   }
 
   .header-icons {
-    gap: 10px;
+    gap: 8px;
   }
 
   .icon-button {
-    font-size: 18px;
-  }
-
-  .main-container {
-    flex-direction: column;
+    font-size: 16px;
   }
 
   .sidebar, .content {
     width: 100%;
-    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
   }
 
   .sidebar ul li {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 5px;
   }
 
   .content h3 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .games-list ul li {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 5px;
   }
 
   .featured-matches {
@@ -271,58 +297,81 @@ a.match-link:hover {
 
   .column {
     width: 100%;
+    gap: 5px;
   }
 
   .match {
     padding: 5px;
-  }
-
-  .match h2 {
-    font-size: 1.4rem;
-  }
-
-  .match p {
-    font-size: 0.9rem;
-    margin: 10px 0;
-  }
-
-  .vs {
-    font-size: 1.5rem;
-  }
-
-  .match img, .team-logo {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-title {
-    font-size: 14px;
-  }
-
-  .logo-img-size-index {
-    width: 30px;
-  }
-
-  .icon-button {
-    font-size: 16px;
+    margin-bottom: 5px;
   }
 
   .match h2 {
     font-size: 1.2rem;
+    margin: 5px 0;
   }
 
   .match p {
     font-size: 0.8rem;
+    margin: 5px 0;
   }
 
   .vs {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .match img, .team-logo {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 4px;
+  }
+
+  .mainPageHeader {
+    padding: 3px 8px;
+  }
+
+  .header-title {
+    font-size: 14px;
+    width: 50%;
+  }
+
+  .logo-img-size-index {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-button {
+    font-size: 14px;
+  }
+
+  .sidebar ul li,
+  .games-list ul li {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .content h3 {
+    font-size: 16px;
+  }
+
+  .match h2 {
+    font-size: 1rem;
+  }
+
+  .match p {
+    font-size: 0.7rem;
+  }
+
+  .vs {
+    font-size: 1.1rem;
+  }
+
+  .match img, .team-logo {
+    width: 35px;
+    height: 35px;
   }
 }
